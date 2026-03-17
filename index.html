@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>maciek@dev:~</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="boot">
+  <div class="boot-logo">◈ INITIALIZING PROFILE...</div>
+  <div class="boot-bar-wrap"><div class="boot-bar"></div></div>
+  <div class="boot-txt">loading maciek@dev environment</div>
+</div>
+
+<canvas id="particles"></canvas>
+
+<div class="crt-scanlines"></div>
+<div class="crt-vignette"></div>
+<div class="crt-flicker"></div>
+
+<div class="window">
+  <div class="titlebar">
+    <div class="dot dot-r"></div>
+    <div class="dot dot-y"></div>
+    <div class="dot dot-g"></div>
+    <span class="titlebar-label">maciek@dev — zsh</span>
+    <div class="titlebar-tabs">
+      <div class="tab active" data-tab="home">~</div>
+      <div class="tab" data-tab="projects">projects</div>
+      <div class="tab" data-tab="thesis">thesis</div>
+    </div>
+  </div>
+
+  <div class="term-body" id="term"></div>
+
+  <div class="statusbar">
+    <div class="sb"><div class="sb-dot"></div><span>zsh 5.9</span><span class="sb-pill">● main</span></div>
+    <div class="sb"><span id="sb-time"></span><span>UTF-8</span><span>PL</span></div>
+  </div>
+</div>
+
+<script src="js/particles.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/home.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/thesis.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
