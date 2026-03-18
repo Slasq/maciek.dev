@@ -33,8 +33,8 @@ async function runHome() {
 
   await typeCmd('cat contact.json');
   mkGap();
-  await outLine(`  <span class="c-muted">{</span>`, '', 0);
-  await linkRow('  ⌂ ', '&quot;portfolio&quot;', '#', 'maciek.dev');
+  //await outLine(`  <span class="c-muted">{</span>`, '', 0);
+  //await linkRow('  ⌂ ', '&quot;portfolio&quot;', '#', 'maciek.dev');
   await wait(60);
   await linkRow('  ⌥ ', '&quot;github&quot;',    'https://github.com/CatNipLover',                        'github.com/CatNipLover');
   await wait(60);
