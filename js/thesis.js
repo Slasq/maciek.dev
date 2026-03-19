@@ -11,7 +11,7 @@ async function runThesis() {
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:110px">  uczelnia</span><span class="c-white">Politechnika Rzeszowska</span>`, '', 0);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:110px">  kierunek</span><span class="c-white">Inżynieria i Analiza Danych</span>`, '', 30);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:110px">  promotor</span><span class="c-white">Dr inż. Marek Bolanowski</span>`, '', 30);
-  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:110px">  status</span><span style="color:#fb923c">○ w trakcie</span>`, '', 30);
+  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:110px">  status</span><span style="color:#fb923c">○ Coming Soon!</span>`, '', 30);
   mkGap();
 
   await typeCmd('cat stack.txt', path);
