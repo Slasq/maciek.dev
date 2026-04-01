@@ -36,7 +36,7 @@ async function runHome() {
   //await outLine(`  <span class="c-muted">{</span>`, '', 0);
   //await linkRow('  ⌂ ', '&quot;portfolio&quot;', '#', 'maciek.dev');
   await wait(60);
-  await linkRow('  ⌥ ', '&quot;github&quot;',    'https://github.com/CatNipLover',                        'github.com/CatNipLover');
+  await linkRow('  ⌥ ', '&quot;github&quot;',    'https://github.com/Slasq',                        'github.com/Slasq');
   await wait(60);
   await linkRow('  ⊞ ', '&quot;linkedin&quot;',  'https://www.linkedin.com/in/maciek-gilecki-b968a1331',  'linkedin.com/in/maciek-gilecki');
   await wait(60);
