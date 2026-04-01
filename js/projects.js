@@ -6,7 +6,7 @@ async function runProjects() {
   //await outLine(`  <span class="c-violet">// stay tuned</span>`, '', 0);
   //mkGap();
   
-  await outLine(`  <span class="c-violet">▸ Dashboard do detekcji anomalii</span>`,'',0);
+  await outLine(`  <span class="c-violet">▸ Porównanie modeli detekcji anomalii</span>`,'',0);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">  desc</span><span class="c-white">Anomaly Detection Showdown</span>`,'',30);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">  stack</span><span class="c-white">Python · Isolation Forest · Autoencoder</span>`,'',30);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">  status</span><span class="c-orange">○ Work in progress!</span>`,'',30);
