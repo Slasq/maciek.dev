@@ -11,7 +11,7 @@ async function runHome() {
   ]);
   mkGap();
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">name</span><span class="c-white">Maciej Gilecki</span>`, '', 0);
-  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">role</span><span class="c-white">Data Engineer &amp; Frontend Developer</span>`, '', 40);
+  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">role</span><span class="c-white">Data Engineer</span>`, '', 40);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">focus</span><span class="c-white">Data Analysis · Anomaly Detection · Cybersecurity</span>`, '', 40);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">location</span><span class="c-white">Rzeszów, PL 🇵🇱</span>`, '', 40);
   await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">status</span><span class="c-green">● Part of Prz Racing team</span>`, '', 40);
@@ -28,7 +28,7 @@ async function runHome() {
 
   await typeCmd('ls ./skills/');
   mkGap();
-  await tags(['Next.js', 'React', 'Tailwind CSS', 'scikit-learn', 'Faker', 'Drain3', 'Git', 'Linux', 'PostgreSQL']);
+  await tags(['Python', 'scikit-learn', 'Faker', 'Drain3', 'Linux Internals', 'PostgreSQL', 'Docker', 'Pandas', 'Wireshark']);
   mkGap();
 
   await typeCmd('cat contact.json');
