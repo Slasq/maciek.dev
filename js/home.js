@@ -33,14 +33,18 @@ async function runHome() {
 
   await typeCmd('cat contact.json');
   mkGap();
-  //await outLine(`  <span class="c-muted">{</span>`, '', 0);
-  //await linkRow('  ⌂ ', '&quot;portfolio&quot;', '#', 'maciek.dev');
+
+  await outLine(`  <span class="c-muted">{</span>`, '', 0);
+  
+  //await linkRow('  ⌂ ', '&quot;terefere&quot;',    'https://terefere/Slasq', 'terefere/Slasq');
+  //await wait(60);
   await wait(60);
-  await linkRow('  ⌥ ', '&quot;github&quot;',    'https://github.com/Slasq',                        'github.com/Slasq');
+  await linkRow('  ⌥ ', '&quot;github&quot;',    'https://github.com/Slasq', 'github.com/Slasq');
   await wait(60);
-  await linkRow('  ⊞ ', '&quot;linkedin&quot;',  'https://www.linkedin.com/in/maciek-gilecki-b968a1331',  'linkedin.com/in/maciek-gilecki');
+  await linkRow('  ⊞ ', '&quot;linkedin&quot;',  'https://www.linkedin.com/in/maciek-gilecki-b968a1331', 'linkedin.com/in/maciek-gilecki');
   await wait(60);
-  await linkRow('  ✉ ', '&quot;email&quot;',     'mailto:maciekgilecki@gmail.com',                        'maciekgilecki@gmail.com');
+  await linkRow('  ✉ ', '&quot;email&quot;',     'mailto:maciekgilecki@gmail.com', 'maciekgilecki@gmail.com');
+  await outLine(`  <span class="c-muted">}</span>`, '', 0);
   mkGap();
   idle();
 }
