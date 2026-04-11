@@ -1,50 +1,40 @@
 async function runHome() {
-  await typeCmd('whoami --verbose');
+  // Symulacja sprawdzania połączenia
+  await typeCmd('ping -c 3 maciek.dev');
   mkGap();
+  await outLine(`  <span class="c-dim">PING maciek.dev (127.0.0.1) 56(84) bytes of data.</span>`, '', 0);
+  await outLine(`  <span class="c-red">From 127.0.0.1 icmp_seq=1 Destination Host Unreachable</span>`, '', 600);
+  await outLine(`  <span class="c-red">From 127.0.0.1 icmp_seq=2 Destination Host Unreachable</span>`, '', 600);
+  await outLine(`  <span class="c-red">From 127.0.0.1 icmp_seq=3 Destination Host Unreachable</span>`, '', 600);
+  await outLine(`  <span class="c-dim">--- maciek.dev ping statistics ---</span>`, '', 100);
+  await outLine(`  <span class="c-dim">3 packets transmitted, 0 received, +3 errors, 100% packet loss</span>`, '', 0);
+  mkGap();
+
+  // Sprawdzanie statusu serwera
+  await typeCmd('./check_status.sh');
+  mkGap();
+  
+  // Napis OFFLINE w ASCII
   await ascii([
-    ' ███╗   ███╗ █████╗  ██████╗██╗███████╗██╗  ██╗',
-    ' ████╗ ████║██╔══██╗██╔════╝██║██╔════╝██║ ██╔╝',
-    ' ██╔████╔██║███████║██║     ██║█████╗  █████╔╝ ',
-    ' ██║╚██╔╝██║██╔══██║██║     ██║██╔══╝  ██╔═██╗ ',
-    ' ██║ ╚═╝ ██║██║  ██║╚██████╗██║███████╗██║  ██╗',
-    ' ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝╚══════╝╚═╝  ╚═╝',
+    '   ██████╗ ███████╗███████╗██╗     ██╗███╗   ██╗███████╗',
+    '  ██╔═══██╗██╔════╝██╔════╝██║     ██║████╗  ██║██╔════╝',
+    '  ██║   ██║█████╗  █████╗  ██║     ██║██╔██╗ ██║█████╗  ',
+    '  ██║   ██║██╔══╝  ██╔══╝  ██║     ██║██║╚██╗██║██╔══╝  ',
+    '  ╚██████╔╝██║     ██║     ███████╗██║██║ ╚████║███████╗',
+    '   ╚═════╝ ╚═╝     ╚═╝     ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝'
   ]);
   mkGap();
-  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">name</span><span class="c-white">Maciej Gilecki</span>`, '', 0);
-  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">role</span><span class="c-white">Data Engineer</span>`, '', 40);
-  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">focus</span><span class="c-white">Data Analysis · Anomaly Detection · Cybersecurity</span>`, '', 40);
-  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">location</span><span class="c-white">Rzeszów, PL 🇵🇱</span>`, '', 40);
-  await outLine(`  <span class="c-dim" style="display:inline-block;min-width:90px">status</span><span class="c-green">● Part of Prz Racing team</span>`, '', 40);
+
+  await outLine(`  <span class="c-red">● STATUS: 503 SERVICE UNAVAILABLE</span>`, '', 0);
+  await outLine(`  <span class="c-orange">● SYSTEM: UNDER MAINTENANCE</span>`, '', 40);
   mkGap();
 
-  await typeCmd('cat about.txt');
-  mkGap();
-  await outLine(`  <span class="c-violet">Head of Frontend Dev @ PRz Racing</span>`, '', 0);
-  await outLine(`  <span class="c-white">Student inżynierii i analizy danych — Politechnika Rzeszowska, rok 3.</span>`, '', 50);
-  await outLine(`  <span class="c-dim">Student za dnia, frontend dev w garażu wyścigowym</span>`, '', 50);
-  await outLine(`  <span class="c-dim">Piszę kod, projektuję systemy, ścigam się z deadlinami.</span>`, '', 50);
-  await outLine(`  <span class="c-white">Równolegle: nowoczesny frontend (Next.js + Tailwind).</span>`, '', 50);
+  // Komunikat o przebudowie
+  await outLine(`  <span class="c-violet">▸ Przerwa techniczna</span>`, '', 0);
+  await outLine(`  <span class="c-white">Strona jest tymczasowo zawieszona z powodu prac serwisowych.</span>`, '', 40);
+  await outLine(`  <span class="c-dim">Kompiluję nowe paczki, układam divy i trenuję modele.</span>`, '', 40);
+  await outLine(`  <span class="c-dim">Zajrzyj ponownie za jakiś czas!</span>`, '', 40);
   mkGap();
 
-  await typeCmd('ls ./skills/');
-  mkGap();
-  await tags(['Python', 'scikit-learn', 'Faker', 'Drain3', 'Linux Internals', 'PostgreSQL', 'Docker', 'Pandas', 'Wireshark']);
-  mkGap();
-
-  await typeCmd('cat contact.json');
-  mkGap();
-
-  await outLine(`  <span class="c-muted">{</span>`, '', 0);
-  
-  //await linkRow('  ⌂ ', '&quot;terefere&quot;',    'https://terefere/Slasq', 'terefere/Slasq');
-  //await wait(60);
-  await wait(60);
-  await linkRow('  ⌥ ', '&quot;github&quot;',    'https://github.com/Slasq', 'github.com/Slasq');
-  await wait(60);
-  await linkRow('  ⊞ ', '&quot;linkedin&quot;',  'https://www.linkedin.com/in/maciek-gilecki-b968a1331', 'linkedin.com/in/maciek-gilecki');
-  await wait(60);
-  await linkRow('  ✉ ', '&quot;email&quot;',     'mailto:maciekgilecki@gmail.com', 'maciekgilecki@gmail.com');
-  await outLine(`  <span class="c-muted">}</span>`, '', 0);
-  mkGap();
   idle();
 }
